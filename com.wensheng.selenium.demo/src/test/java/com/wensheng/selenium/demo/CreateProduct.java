@@ -8,18 +8,18 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.longteng.qa.util.Logger;
-import com.wensheng.selenium.page.AddProductPage;
+import com.wensheng.selenium.page.ProductPage;
 import com.wensheng.selenium.page.ServerHomePage;
 import com.wensheng.selenium.util.TestBase;
 
 public class CreateProduct extends TestBase {
 	ServerHomePage serverHomePage=null;
-	AddProductPage addProductPage=null;
+	ProductPage addProductPage=null;
 
 	@BeforeClass
 	public void initPage(){
 		serverHomePage = PageFactory.initElements(driver, ServerHomePage.class);
-		addProductPage = PageFactory.initElements(driver, AddProductPage.class);
+		addProductPage = PageFactory.initElements(driver, ProductPage.class);
 	}
 	
 	@Test(dataProvider="csv")
