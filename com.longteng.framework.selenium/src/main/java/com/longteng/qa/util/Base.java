@@ -11,9 +11,9 @@ import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 
-import com.pingan.qa.dataprovider.CsvDataProvider;
-import com.pingan.qa.dataprovider.ExcelDataProvider;
-import com.pingan.qa.dataprovider.XmlDataProvider;
+import com.longteng.qa.dataprovider.CsvDataProvider;
+import com.longteng.qa.dataprovider.ExcelDataProvider;
+import com.longteng.qa.dataprovider.XmlDataProvider;
 
 import java.awt.AWTException;
 import java.awt.Robot;

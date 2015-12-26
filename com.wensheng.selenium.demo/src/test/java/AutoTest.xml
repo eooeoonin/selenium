@@ -2,7 +2,7 @@
 <suite name="suite">
 	<test verbose="2" preserve-order="true" name="test">
     	<classes>
-			<class name="com.wensheng.selenium.demo.CreateProduct">
+			<class name="com.wensheng.selenium.demo.TestDemo">
 				<methods>
 					<include name="test_login"></include>
 				</methods>

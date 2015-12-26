@@ -1,4 +1,4 @@
-package com.pingan.qa.dataprovider;
+package com.longteng.qa.dataprovider;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
