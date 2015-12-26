@@ -1,0 +1,54 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name='suiteName'>
+	<test verbose="2" preserve-order="true" name="test">
+		<classes>
+			<class name="com.jd.pop.qa.test.ma.AnalyseCustomerTest">
+				<methods>
+					<include name="AnalyseCustomer_Test_1"></include>
+					<include name="AnalyseCustomer_Test_2"></include>
+					<include name="AnalyseCustomer_Test_3"></include>
+					<include name="AnalyseCustomer_Test_4"></include>
+				</methods>
+			</class>
+			<class name="com.jd.pop.qa.test.ma.CreateCouponTest">
+				<methods>
+					<include name="createCoupon_Test"></include>
+				</methods>
+			</class>
+			<class name="com.jd.pop.qa.test.ma.CreateMarketingTest">
+				<methods>
+					<include name="createMarketing_Test"></include>
+				</methods>
+			</class>			
+			<class name="com.jd.pop.qa.test.ma.SynchronousRecordToQueueTest">
+				<methods>
+					<include name="synchronousRecordToQueue_Test"></include>
+				</methods>
+			</class>
+			<class name="com.jd.pop.qa.test.CustomerViewTest">
+				<methods>
+					<include name="selectNoCustomer_Test"></include>
+					<include name="customerMarketingShield_Test"></include>
+				</methods>
+			</class>
+			<class name="com.jd.pop.qa.test.CustomerModleTest">
+				<methods>
+					<include name="addAndDeleteCustomerModle_Test"></include>
+					<include name="updateCustomerModle_Test"></include>
+				</methods>
+			</class>
+			<class name="com.jd.pop.qa.test.CustomerLevelTest">
+				<methods>
+					<include name="customerLevel_Test"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<listeners>
+		<listener class-name="com.jd.pop.qa.report.HTMLReporter"></listener>
+		<listener class-name="com.jd.pop.qa.listener.JDListener"></listener>
+		<listener class-name="com.jd.pop.qa.listener.JDListenerAdapter"></listener>
+		<listener class-name="com.jd.pop.qa.listener.EATReportListenerAdapter"/>
+    	<listener class-name="com.jd.pop.qa.listener.ReportListener"/>
+	</listeners>
+</suite>
