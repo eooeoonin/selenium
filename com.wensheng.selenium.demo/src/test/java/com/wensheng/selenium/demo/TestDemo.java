@@ -78,6 +78,12 @@ public class TestDemo extends TestBase {
         System.out.println("这个方法是happy");
         System.out.println(data.get("EMAIL") + "-----" + data.get("PASSWORD") + "-----" + data.get("WARNINGINFO"));
     }
+    
+    @Test(dataProvider="xls")
+    public void aa(Map<String , String> data){
+        System.out.println("这个方法是aa");
+        System.out.println(data.get("ID") + "-----" + data.get("NAME") );
+    }
 
 //	@Test(dataProvider = "csv")
 //	public void test_login(String user, String password, String message)

@@ -52,12 +52,12 @@ public class ExcelDataProvider implements Iterator<Object[]> {
 			// sheet = book.getSheet(methodname);
 			sheet = book.getSheet(caseNum); // 读取第一个sheet
 			rowNum = sheet.getRows(); // 获得该sheet的 所有行
-			Cell[] cell = sheet.getRow(0);// 获得第一行的所有单元格
+			Cell[] cell = sheet.getRow(1);// 获得第二行的所有单元格
 			columnNum = cell.length; // 单元格的个数 值 赋给 列数
 			columnnName = new String[cell.length];// 开辟 列名的大小
 
 			for (int i = 0; i < cell.length; i++) {
-				columnnName[i] = cell[i].getContents().toString(); // 第一行的值
+				columnnName[i] = cell[i].getContents().toString(); // 第二行的值
 																	// 被赋予为列名
 			}
 			this.currentRowNo++;
