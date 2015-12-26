@@ -69,7 +69,7 @@ public class TestDemo extends TestBase {
 
     @Test(dataProvider="xls")
          public void lala(Map<String , String> data){
-        System.out.println("这个方法是拉拉");
+        System.out.println("这个方法是lala");
         System.out.println(data.get("name") + "-----" + data.get("PASSWORD") + "-----" + data.get("group"));
     }
 

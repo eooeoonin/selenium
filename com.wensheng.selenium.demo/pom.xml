@@ -47,5 +47,6 @@
       <artifactId>com.longteng.framework.selenium</artifactId>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
+
   </dependencies>
 </project>

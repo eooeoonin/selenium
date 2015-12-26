@@ -9,13 +9,9 @@ import java.util.List;
  * @author nihuaiqing
  */
 public class DataProviderImpl implements IData{
-	
 	protected String defaultPath = "resources/testdata/data/";
-	
 	protected int start = 1;
-	
 	protected int max = Integer.MAX_VALUE;
-	
 	protected List<Object[]> data = new ArrayList<Object[]>();
 	
 	/**

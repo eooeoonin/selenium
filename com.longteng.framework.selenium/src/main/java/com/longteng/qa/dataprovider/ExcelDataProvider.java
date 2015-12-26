@@ -70,10 +70,9 @@ public class ExcelDataProvider implements Iterator<Object[]> {
 			Assert.fail("不能读取文件： [" + path + "]");
 		}
 	}
+
 	/**是否还有下个内容*/
-
 	public boolean hasNext() {
-
 		if (this.rowNum == 0 || this.currentRowNo >= this.rowNum) {
 			try {
 				inputStream.close();

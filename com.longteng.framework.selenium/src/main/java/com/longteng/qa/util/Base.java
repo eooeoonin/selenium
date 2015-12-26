@@ -52,8 +52,7 @@ public class Base{
     	Logger.setLog();
     	new InitProperties();
 	}
-	
-	
+
 	/**
 	 * xml数据驱动调用
 	 */
@@ -70,11 +69,12 @@ public class Base{
 		System.out.println(m.getName()+"-----"+m.getDeclaringClass().getSimpleName());
 			return new CsvDataProvider().getData(m.getName()+".csv",m.getDeclaringClass().getSimpleName());
 	}
+
 	/**
 	 * 测试数据提供者 - 方法
 	 * */
 	@DataProvider(name = "xls")
-	public Iterator<Object[]> dataFortestMethod(Method m) throws IOException {
+	public Iterator<Object[]> xlsData(Method m) throws IOException {
 //		String moduleName = null; // 模块的名字
 //		String caseNum = null; // 用例编号
 //		String className = this.getClass().getName();
@@ -94,6 +94,7 @@ public class Base{
 		String moduleName=m.getDeclaringClass().getSimpleName();
 		return new ExcelDataProvider(moduleName, m.getName());
 	}
+
 	/**
 	 * 模拟键盘按键操作
 	 * @param key of KeyEvent 
@@ -136,6 +137,7 @@ public class Base{
 			e.printStackTrace();
 		}
 	}
+
 /**
  * @param type 获取当前日期
  */
@@ -144,6 +146,7 @@ public class Base{
 		 SimpleDateFormat dates= new SimpleDateFormat("yyyy-MM-dd");
 		return dates.format(date).toString();
 	}
+
 	/**
 	 * @param type 获取根据当前时间的任意时间
 	 */
@@ -163,7 +166,6 @@ public class Base{
 			e.printStackTrace();
 		}
 		return null;
-		
 	}
 	
 	/**
@@ -236,6 +238,7 @@ public class Base{
 		} catch (AWTException e) {
 		}
 	}
+
 	/**
 	 * 返回一个随机的电话
 	 */
@@ -252,8 +255,8 @@ public static String suijiMob(){
 			return mobile;
 		}
 	return suijiMob();
-	
 }
+
 /**
  * 返回随机的名字
  */
@@ -280,6 +283,7 @@ public static String suijiName(int len){
      }
  return ret;
 }
+
 /**
  * @pram 每个参数项为空时检查结果
  * 
@@ -291,9 +295,8 @@ public static void canshuEmpty(String url,String id,String mes,String[] expect){
 		String actu=jsonStr(list.get(x).toString(), id).toString();
 		Assert.assertEquals(actu, expect[x]);
 	}
-	
-	
 }
+
 /**
  * 接口传递异常参数检测
  */
@@ -339,6 +342,7 @@ public static List jiekouCheck(String url){
 	}
 	return list;
 }
+
 /**
  * @param 接口测试并判断结果
  * @param url 所测试的接口地址
@@ -360,20 +364,19 @@ public static void jiekouceshi(String url,String actu,String[] expects){
 		System.out.println("接口异常请排查原因");
 	}
 }
+
 /**
  *  @param 接口测试，支持GET,post
  *  @param 可以获得状态码等等
  *  @return  返回 reponse
  */
-
 public static HttpResponse jiekou(String b) {
 	Logger.log("地址是"+b);
 	HttpRequest httpRequest = HttpRequest.get(b);
     HttpResponse response = httpRequest.charset("utf-8").send();
 	return response;
-
-
 }
+
 /**
  * @param json :字符串  获取指定值
  *@param lei: 希望获得的对应值
@@ -384,8 +387,8 @@ public static Object jsonStr(String name,String lei){
 	JSONObject json =  new JSONObject(f.substring(f.indexOf("{"),f.lastIndexOf("}")+1));
 	Object sss= json.get(lei);
 	return sss;
-	
 }
+
 /**
  * @param jsonshuzu 获取指定字符数组值
  */
@@ -394,7 +397,6 @@ public static JSONArray jsonArr(String name,String lei){
 	JSONObject json =  new JSONObject(name.substring(name.indexOf("{"),name.lastIndexOf("}")+1));
 	JSONArray sss= (JSONArray) json.get(lei);
 	return sss;
-	
 }
 
 }

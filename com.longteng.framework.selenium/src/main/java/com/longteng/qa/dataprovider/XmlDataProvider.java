@@ -18,17 +18,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class XmlDataProvider extends DataProviderImpl {
-
     private static final String CASENODETAG = "case";
-
     private static final String ROWNODETAG = "row";
-
     private static final String DATANODETAG = "data";
-
     private static final String TYPETAG = "type";
-
     private static final String VALUETAG = "value";
-
     private static final String SPILTTAG = "spilt";
 
     @Override
