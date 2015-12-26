@@ -65,7 +65,19 @@ public class TestDemo extends TestBase {
 //	      	   delay(2);
 //	      	  }
 //	    }
-	
+
+//    @test(dataProvider="xls")
+//         public void lala(Map<String , String> data){
+//        System.out.println("这个方法是拉拉");
+//        System.out.priintln(data.get("name")+"-----"+data.get("PASSWORD")+"-----"+data.get("group"));
+//    }
+
+//    @test(dataProvider="xls")
+//    public void happy(Map<String , String> data){
+//        System.out.println("这个方法是happy");
+//        System.out.priintln(data.get("EMAIL")+"-----"+data.get("PASSWORD")+"-----"+data.get("WARNINGINFO"));
+//    }
+
 	@Test(dataProvider = "csv")
 	public void test_login(String user, String password, String message)
 			throws Exception {
