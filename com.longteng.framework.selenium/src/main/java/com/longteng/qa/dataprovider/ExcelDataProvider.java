@@ -46,7 +46,7 @@ public class ExcelDataProvider implements Iterator<Object[]> {
 		try {
 			//文件路径
 			path = "resources/testdata/data/" + moduleName + ".xls";
-			 inputStream = new FileInputStream(path);
+			inputStream = new FileInputStream(path);
 
 			book = Workbook.getWorkbook(inputStream);
 			// sheet = book.getSheet(methodname);
@@ -75,7 +75,6 @@ public class ExcelDataProvider implements Iterator<Object[]> {
 	public boolean hasNext() {
 
 		if (this.rowNum == 0 || this.currentRowNo >= this.rowNum) {
-
 			try {
 				inputStream.close();
 				book.close();
@@ -90,23 +89,18 @@ public class ExcelDataProvider implements Iterator<Object[]> {
 			return true;
 		}
 	}
+
 	/**返回内容*/
 	public Object[] next() {
-
 		Cell[] c = sheet.getRow(this.currentRowNo);
-
 		Map<String, String> data = new HashMap<String, String>();
-
 		for (int i = 0; i < this.columnNum; i++) {
-
 			String temp = "";
-
 			try {
 				temp = c[i].getContents().toString();
 			} catch (ArrayIndexOutOfBoundsException ex) {
 				temp = "";
 			}
-
 			data.put(this.columnnName[i], temp);
 		}
 		Object object[] = new Object[1];

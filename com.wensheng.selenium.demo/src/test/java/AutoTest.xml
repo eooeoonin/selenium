@@ -4,15 +4,13 @@
     	<classes>
 			<class name="com.wensheng.selenium.demo.TestDemo">
 				<methods>
-					<include name="test_login"></include>
+					<include name="lala"></include>
+                    <include name="happy"></include>
 				</methods>
 			</class>
     	</classes>
   	</test>
   	<listeners>
-<!--     		<listener class-name="com.wensheng.qa.report.HTMLReporter"/> -->
-<!--     		<listener class-name="com.wensheng.qa.listener.SeleniumListener"/> -->
-<!--     		<listener class-name="com.wensheng.qa.listener.SeleniumListenerAdapter"/> -->
     		<listener class-name="com.longteng.qa.report.HTMLReporter"/>
     		<listener class-name="com.longteng.qa.listener.SeleniumListener"/>
     		<listener class-name="com.longteng.qa.listener.SeleniumListenerAdapter"/>

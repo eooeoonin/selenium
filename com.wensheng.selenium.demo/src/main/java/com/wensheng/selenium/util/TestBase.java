@@ -13,7 +13,7 @@ public class TestBase extends DriverBase{
 	
 	@BeforeTest
 	public void beforeTestBase() {
-		launch();
+		//launch();
 	}
 
 	@AfterTest(alwaysRun=true)
@@ -21,14 +21,13 @@ public class TestBase extends DriverBase{
 		quit();
 	}
 	
-	@BeforeClass
-	public void beforeBaseClass() {
-	}
-	
-	@AfterClass(alwaysRun=true)
-	public void afterBaseClass() {
-		
-	}
+//	@BeforeClass
+//	public void beforeBaseClass() {
+//	}
+//
+//	@AfterClass(alwaysRun=true)
+//	public void afterBaseClass() {
+//	}
 	
 	/**
 	 * quit browser
